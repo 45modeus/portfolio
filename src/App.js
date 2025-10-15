@@ -6,7 +6,7 @@ import Contact from "./contact.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
@@ -22,7 +22,6 @@ function App() {
           </div>
         </footer>
       </div>
-
     </Router>
   );
 }
