@@ -7,20 +7,14 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const scrollToSection = (id) => {
+  const scrollToHome = () => {
     if (location.pathname !== "/") {
-      // If user is not on the homepage, redirect to homepage with hash
-      navigate(`/portfolio/#${id}`);
-      window.location.href = `/portfolio/#${id}`;
+      navigate("/");
+      setIsOpen(false);
       return;
     }
-
-    // If already on homepage, scroll smoothly
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-
+    const element = document.getElementById("home");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
 
@@ -28,32 +22,20 @@ function Navbar() {
     <nav className="fixed top-0 w-full bg-[#F5F5F5]/95 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/portfolio/" className="text-lg font-semibold text-[#0B3C5D]">
+          <Link to="/" className="text-lg font-semibold text-[#0B3C5D]">
             Laurie's Portfolio
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <button
-              onClick={() => scrollToSection("home")}
+              onClick={scrollToHome}
               className="text-[#328CC1] hover:text-[#0B3C5D] transition font-medium"
             >
               Home
             </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-[#328CC1] hover:text-[#0B3C5D] transition font-medium"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-[#328CC1] hover:text-[#0B3C5D] transition font-medium"
-            >
-              Skills
-            </button>
             <Link
-              to="/portfolio/contact"
+              to="/contact"
               className="text-[#328CC1] hover:text-[#0B3C5D] transition font-medium"
             >
               Contact
@@ -72,17 +54,14 @@ function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-2 bg-[#D9E4F5] border-t border-[#328CC1]">
-            {["home", "about", "skills"].map((id) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-                className="block w-full text-left px-4 py-3 text-[#328CC1] hover:bg-[#F5F5F5] hover:text-[#0B3C5D] transition rounded"
-              >
-                {id.charAt(0).toUpperCase() + id.slice(1)}
-              </button>
-            ))}
+            <button
+              onClick={scrollToHome}
+              className="block w-full text-left px-4 py-3 text-[#328CC1] hover:bg-[#F5F5F5] hover:text-[#0B3C5D] transition rounded"
+            >
+              Home
+            </button>
             <Link
-              to="/portfolio/contact"
+              to="/contact"
               onClick={() => setIsOpen(false)}
               className="block w-full text-left px-4 py-3 text-[#328CC1] hover:bg-[#F5F5F5] hover:text-[#0B3C5D] transition rounded"
             >
