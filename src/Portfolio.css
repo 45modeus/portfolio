@@ -1,284 +1,85 @@
-/* Hero Image */
-.center {
-  display: block;
-  margin: 2.5% auto;
-  width: 160px; /* slightly smaller for better visual */
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.center:hover {
-  transform: scale(0.95);
-  opacity: 0.9;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
 }
 
-/* Navbar styling */
-.custom-navbar {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  background: #8b0000; /* match button color */
-  transition: width 0.3s;
-  bottom: -4px;
-  left: 0;
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
-}
-
-.nav-links li a:hover {
-  color: #8b0000;
-}
-
-/* Responsive: collapse nav links into column on small screens */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-
-/* Intro Heading */
-.Introh1 {
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 1.5rem;
-  color: #333;
-}
-
-/* Title under heading */
-.title {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #555;
-  margin-top: 0.5rem;
-}
-
-/* Description paragraph */
-.descript {
-  letter-spacing: 0.5px;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1.8;
-  color: #444;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Buttons */
-.ctcbtn {
-  margin-top: 2rem;
-}
-
-.button {
-  background-color: #8b0000; /* dark brown/red */
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  padding: 0.75rem 2rem;
-  font-size: 1.125rem;
-  width: 250px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.button span {
-  position: relative;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.button span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.3s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-/* Contact Section */
-
-#contact {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 2rem;
-  text-align: center;
-  color: #333;
-}
-
-#contact h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-#contact hr {
-  width: 50px;
-  border: 2px solid #8b0000;
-  margin: 1rem auto 2rem;
-  opacity: 0.8;
-}
-
-/* Contact info icons and text */
-.ctcicons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-  color: #555;
-}
-
-.ctcicons i {
-  font-size: 1.5rem;
-  color: #8b0000; /* match button color */
-}
-
-/* Buttons for downloads */
-#contact a button {
-  background-color: #8b0000;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 0.6rem 1.5rem;
-  margin: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#contact a button:hover {
-  background-color: #a52a2a;
-  transform: translateY(-2px);
-}
-
-/* Form styling */
-form {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
+/* Remove default button styles */
+button {
   font-family: inherit;
-  transition: all 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-  border-color: #8b0000;
-  outline: none;
-  box-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
-}
-
-/* Message label */
-.msgArea {
-  font-weight: 500;
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 0.25rem;
-  text-align: left;
-  width: 100%;
-  max-width: 500px;
-}
-
-/* Submit button */
-form button {
-  background-color: #8b0000;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  margin-top: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-form button:hover {
-  background-color: #a52a2a;
-  transform: translateY(-2px);
+/* Ensure links have no underline by default */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #contact {
-    padding: 1.5rem;
-  }
+/* Footer Styles */
+footer {
+  background-color: #111827;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
 
-  form input,
-  form textarea {
-    max-width: 100%;
-  }
+footer p {
+  color: #9ca3af;
+}
 
-  .ctcicons {
-    flex-direction: column;
-    gap: 0.25rem;
-    font-size: 1rem;
+/* Utility for centering profile image if not using Tailwind classes */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Animation for skill bars */
+@keyframes slideIn {
+  from {
+    width: 0;
   }
+  to {
+    width: var(--skill-width);
+  }
+}
+
+/* Responsive image handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
