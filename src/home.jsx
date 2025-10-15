@@ -46,7 +46,7 @@ function Home() {
                         and I'm ready to bring my skills and enthusiasm to a professional environment.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <a href="/contact">
+                        <Link to="/contact">
                             <button
                                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition transform hover:scale-105 font-medium shadow-md"
                             >
