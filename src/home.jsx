@@ -52,7 +52,7 @@ function Home() {
                             >
                                 Get In Touch
                             </button>
-                        </a>
+                            </Link>
                         <button
                             onClick={() => scrollToSection('about')}
                             className="bg-white text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition transform hover:scale-105 font-medium border-2 border-gray-200 shadow-sm"
