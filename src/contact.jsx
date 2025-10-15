@@ -22,7 +22,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-gray-800">Location</p>
-                  <p className="text-gray-600">Trou aux Biches, Mauritius</p>
+                  <p className="text-gray-600">Mauritius</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -31,7 +31,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-gray-800">Phone</p>
-                  <p className="text-gray-600">+230 58465728</p>
+                  <p className="text-gray-600">+230 12345</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -40,7 +40,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-gray-800">Email</p>
-                  <p className="text-gray-600">lauriemichel66@gmail.com</p>
+                  <p className="text-gray-600">demo@gmail.com</p>
                 </div>
               </div>
             </div>
