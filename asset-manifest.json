@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5bfe4468.css",
+    "main.js": "/static/js/main.49c69afe.js",
+    "static/media/MeRounded.png": "/static/media/MeRounded.c7a782b82411872b3fab.png",
+    "index.html": "/index.html",
+    "main.5bfe4468.css.map": "/static/css/main.5bfe4468.css.map",
+    "main.49c69afe.js.map": "/static/js/main.49c69afe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bfe4468.css",
+    "static/js/main.49c69afe.js"
+  ]
+}
