@@ -171,10 +171,6 @@ function Home() {
                             <span role="img" aria-label="Cooking" className="text-3xl mb-2 block">🍳</span>
                             <p className="text-gray-700 font-medium">Cooking</p>
                         </div>
-                        <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 shadow-sm text-center hover:shadow-md transition">
-                            <span role="img" aria-label="Traveling" className="text-3xl mb-2 block">✈️</span>
-                            <p className="text-gray-700 font-medium">Traveling</p>
-                        </div>
                     </div>
                 </div>
             </section>
