@@ -158,7 +158,7 @@ function Home() {
                         <div className="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
                     </div>
 
-                    <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 justify-items-center gap-6">
                         <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 shadow-sm text-center hover:shadow-md transition">
                             <span role="img" aria-label="Gaming" className="text-3xl mb-2 block">🎮</span>
                             <p className="text-gray-700 font-medium">Gaming</p>
@@ -174,6 +174,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+
 
         </>
     );
