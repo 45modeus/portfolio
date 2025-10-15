@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom"; // 👈 changed to HashRouter
 import Navbar from "./navbar.jsx";
 import Home from "./home.jsx";
 import Contact from "./contact.jsx";
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
