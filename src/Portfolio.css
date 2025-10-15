@@ -1,4 +1,6 @@
-/* Global Styles */
+/* =======================
+   Global Styles
+======================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f9fafb;
+  background-color: #F5F5F5; /* off-white */
+  color: #0B3C5D; /* dark blue text */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Smooth Scrolling */
@@ -19,38 +25,101 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Remove default button styles */
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-/* Ensure links have no underline by default */
+/* =======================
+   Links & Buttons
+======================= */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Footer Styles */
-footer {
-  background-color: #111827;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-footer p {
-  color: #9ca3af;
+/* Primary button */
+.btn-primary {
+  background-color: #328CC1;
+  color: #F5F5F5;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Utility for centering profile image if not using Tailwind classes */
+.btn-primary:hover {
+  background-color: #0B3C5D;
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: #F5F5F5;
+  color: #0B3C5D;
+  border: 2px solid #328CC1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background-color: #D9E4F5;
+}
+
+/* =======================
+   Cards
+======================= */
+.card {
+  background: #D9E4F5;
+  border: 1px solid #328CC1;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* =======================
+   Highlight / CTA
+======================= */
+.highlight {
+  color: #F76C5E;
+}
+
+/* =======================
+   Section Headings
+======================= */
+h1, h2, h3, h4 {
+  color: #0B3C5D;
+}
+
+/* =======================
+   Images
+======================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .profile-image-container {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
 }
 
-/* Animation for skill bars */
+/* =======================
+   Skill Bars Animation
+======================= */
 @keyframes slideIn {
   from {
     width: 0;
@@ -60,26 +129,57 @@ footer p {
   }
 }
 
-/* Responsive image handling */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Custom scrollbar for webkit browsers */
+/* =======================
+   Scrollbar
+======================= */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #D9E4F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #328CC1;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #0B3C5D;
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  background-color: #284b63; /* dark-medium blue */
+  color: #F5F5F5;
+  padding: 2rem 1rem;
+  text-align: center;
+  flex-shrink: 0; /* ensures footer stays at bottom */
+}
+
+footer p {
+  color: #D9E4F5;
+}
+
+/* =======================
+   Contact Section
+======================= */
+#contact {
+  background: linear-gradient(135deg, #F5F5F5 0%, #D9E4F5 50%, #F5F5F5 100%);
+  padding: 5rem 1rem;
+}
+
+#contact .card {
+  margin-bottom: 2rem;
+}
+
+#contact h2 {
+  margin-bottom: 0.5rem;
+}
+
+#contact .w-20 {
+  height: 0.25rem;
 }
